@@ -1,8 +1,9 @@
 #include "Currency.h"
 
 class Cash {
-	Currency currency;
-	double startTime;
+private:
+	const Currency currency;
+	const double startTime;
 	double endTime;
 	double accrualFactor;
 	double notional;
@@ -11,5 +12,15 @@ class Cash {
 	double initialAmount;
 
 public:
-	Cash(Currency currency, double startTime, double endTime, double notional, double rate, double accrualFactor);
+	Cash(const Currency& currency, double startTime, double endTime, double notional, double rate, double accrualFactor);
+	double get_startTime() { return startTime; }
+	double get_endTime() { return endTime; }
+	double get_accrualFactor() { return accrualFactor; }
+	double get_notional() { return notional; }
+	double get_rate() { return rate; }
+	double get_interestAmount() { return interestAmount; }
+	double get_initialAmount() { return initialAmount; }
+
+	
+
 };
