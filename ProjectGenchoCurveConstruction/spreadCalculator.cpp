@@ -5,15 +5,17 @@
 SpreadCalculator::SpreadCalculator(const Cash& cash, double curves)
 	: cash{ cash }, curves{ curves }
 { 
-	curves = curves + 1;
+	curves;
 	//double dfStart = 1;
 	//double dfEnd = curves;
 }
-//SpreadCalculator::get_spread(cash, dfStart, dfEnd) {
-//	double spread;
-//	spread =  (cash.get_initialAmount() * dfStart - (cash.get_notional() + cash.get_interestAmount()) * dfEnd) / (cash.get_notional() * cash.get_accrualFactor() * dfEnd);
-//	return spread;
-//}
+/*
+SpreadCalculator::get_spread(cash, dfStart, dfEnd) {
+	double spread;
+	spread =  (cash.get_initialAmount() * dfStart - (cash.get_notional() + cash.get_interestAmount()) * dfEnd) / (cash.get_notional() * cash.get_accrualFactor() * dfEnd);
+	return spread;
+}
+*/
 // return curves
 // pass by value/reference
 // visitor pattern

@@ -1,3 +1,8 @@
+#pragma once // with this uncommented we have 0 errors. 
+// otherwise: Cash class type redefinition error
+// and      : S[readCA;culator::cash uses undefined class Cash
+
+
 #include "Currency.h"
 
 class Cash {
