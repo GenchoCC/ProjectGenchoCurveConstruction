@@ -1,12 +1,13 @@
 #include "SpreadCalculator.h"
-#include "Cash.h"
+//#include "Cash.h"
 
 // I have been offered this: spreadCalculator::~spreadCalculator(Cash cash, double curves)
-SpreadCalculator::SpreadCalculator(Cash cash, double curves)
+SpreadCalculator::SpreadCalculator(const Cash& cash, double curves)
 	: cash{ cash }, curves{ curves }
 { 
-	double dfStart = 1;
-	double dfEnd = curves;
+	curves = curves + 1;
+	//double dfStart = 1;
+	//double dfEnd = curves;
 }
 //SpreadCalculator::get_spread(cash, dfStart, dfEnd) {
 //	double spread;

@@ -2,15 +2,16 @@
 #include <iostream>
 #include <memory>
 #include "Cash.h"
-#include "SpreadCalculator.h"
+//#include "SpreadCalculator.h"
 
 int main()
 {
 	std::cout << "Hello World!" << std::endl;
 	
 	//Cash obj(Currency("EUR"), 2, 3, 1, 0.01, 0.1);
-	/*
+	
 	auto cash1 = std::make_shared<Cash>(Currency("USD"), 2, 3, 1, 0.01, 0.1);
+	/*
 	auto cash2 = std::make_shared<Cash>(Currency("USD"), 2.1, 3.1, 1.1, 0.011, 0.111);
 	//double y = cash1->get_rate(); /// because pointer
 	double x, x_new, jacobian_inv;
