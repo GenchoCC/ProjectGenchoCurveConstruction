@@ -1,4 +1,4 @@
-#pragma once
+//#pragma once
 
 #include "Cash.h"
 
@@ -9,12 +9,11 @@ class SpreadCalculator
 	double curves;
 
 public:
+	double spread;
 
-
-//	double get_spread(cash, dfStart, dfEnd) { return 0; };
-	//double get_spread() { return 0; }
-
-	SpreadCalculator(const Cash& cash, double curves);// constructor 
+	SpreadCalculator(const Cash& cash, double curves); // constructor 
+	double get_spread(); // method with no body
+	
 
 };
 
