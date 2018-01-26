@@ -9,8 +9,9 @@ class SpreadCalculator
 
 public:
 	SpreadCalculator(const Cash& cash, double curves); // constructor 
-	double get_spread(const Cash & cash) const;
-	
+	double get_spread(const Cash & cash, double curves) const; // method with no body
+	double get_curves() { return curves; }
+
 
 };
 

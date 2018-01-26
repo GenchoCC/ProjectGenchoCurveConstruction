@@ -14,7 +14,7 @@ private:
 	double notional;
 	double rate;
 	double interestAmount;
-	double initialAmount;
+	double initialAmount;  // notional
 
 public:
 	Cash(const Currency& currency, double startTime, double endTime, double notional, double rate, double accrualFactor);
@@ -24,7 +24,7 @@ public:
 	double get_notional() const { return notional; }
 	double get_rate() const { return rate; }
 	double get_interestAmount() const { return interestAmount; }
-	double get_initialAmount() const { return initialAmount; }
+	double get_initialAmount() const { return notional; } 
 
 	
 

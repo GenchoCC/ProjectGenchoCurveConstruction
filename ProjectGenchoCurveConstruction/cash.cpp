@@ -5,7 +5,7 @@ Cash::Cash(const Currency& currency, double startTime, double endTime, double no
 	: currency{ currency }, startTime{ startTime }, endTime{ endTime }, notional{ notional }, rate{ rate }, accrualFactor{ accrualFactor }
 {
 	interestAmount = notional * rate * accrualFactor;
-
 }
+
 
 // we make getters and private with consts
