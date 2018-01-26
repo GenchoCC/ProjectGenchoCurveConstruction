@@ -16,12 +16,11 @@ int main()
 	
 	double y = cash1->get_rate(); /// because pointer
 	double x, x_new, jacobian_inv;
-	double spreadValue;
+	double spreadValue_at_x;
 	double error = 10 ^ -3;
 	x_new = 999;
 	double i = 3;
 	SpreadCalculator obj2(obj1, 0.1);
-	spreadValue = obj2.get_spread();
 	do
 	{
 		x = x_new;   
@@ -32,7 +31,9 @@ int main()
 		//double spreadValue = spreadCalcForCash1 ->get_spread();
 
 		jacobian_inv = std::pow((i / x),-1);
-		x_new = x - jacobian_inv * spreadValue;
+		spreadValue_at_x = obj2.get_spread();
+		spreadValue_at_x = obj2.get_spread(obj1);
+		x_new = x - jacobian_inv * spreadValue_at_x;
 		i = i - 1;
 	} while (i > 0);// fabs(x_new - x) >= error);
 	

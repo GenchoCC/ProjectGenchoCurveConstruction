@@ -12,7 +12,11 @@ public:
 	double spread;
 
 	SpreadCalculator(const Cash& cash, double curves); // constructor 
+	double get_spread(const Cash & cash, double curves) const;
+	double get_spread(const Cash & cash, double curves);
 	double get_spread(); // method with no body
+
+	double get_spread(const Cash & cash) const;
 	
 
 };
