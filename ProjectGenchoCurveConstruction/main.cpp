@@ -31,7 +31,6 @@ int main()
 		//double spreadValue = spreadCalcForCash1 ->get_spread();
 
 		jacobian_inv = std::pow((i / x),-1);
-		spreadValue_at_x = obj2.get_spread();
 		spreadValue_at_x = obj2.get_spread(obj1);
 		x_new = x - jacobian_inv * spreadValue_at_x;
 		i = i - 1;

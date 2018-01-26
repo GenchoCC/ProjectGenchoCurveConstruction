@@ -18,13 +18,13 @@ private:
 
 public:
 	Cash(const Currency& currency, double startTime, double endTime, double notional, double rate, double accrualFactor);
-	double get_startTime() { return startTime; }  // method with a body.
+	double get_startTime() const { return startTime; }  // method with a body.
 	double get_endTime() const  { return endTime; } // added const here..
-	double get_accrualFactor() { return accrualFactor; }
-	double get_notional() { return notional; }
-	double get_rate() { return rate; }
-	double get_interestAmount() { return interestAmount; }
-	double get_initialAmount() { return initialAmount; }
+	double get_accrualFactor() const { return accrualFactor; }
+	double get_notional() const { return notional; }
+	double get_rate() const { return rate; }
+	double get_interestAmount() const { return interestAmount; }
+	double get_initialAmount() const { return initialAmount; }
 
 	
 
