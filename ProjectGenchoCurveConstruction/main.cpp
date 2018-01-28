@@ -11,10 +11,10 @@ int main()
 {
 	std::string currencyName = "EUR";
 	double startTime = 0;
-	double endTime = 5;
-	double notional = 100;
-	double rate = 0.15;
-	double accrualFactor = 0.00277777777; // 1/360
+	double endTime = 0.5; //half a year?
+	double notional = 100000000;
+	double rate = 0.0250;
+	double accrualFactor = 0.508; // 1/360
 	Cash  obj1(Currency(currencyName), startTime, endTime, notional, rate, accrualFactor);
 	
 	//auto cash1 = std::make_shared<Cash>(Currency("USD"), 2, 3, 1, 0.01, 0.1);
@@ -22,9 +22,9 @@ int main()
 	//double y = cash1->get_rate(); /// because pointer
 
 	double x, jacobian_at_x, spreadValue_at_x;
-	double error = pow( 10 , -4 );
+	double error = pow( 10 , -12 );
 	double x_new = 0.1; // initial guess of a dfEnd
-	double df0 = 1; // i.e. DF_0=DF_start=DF_S=dfStart = 1 ( i.e. notional at the moment zero is =notional)
+	double df0 = 0.999; // i.e. DF_0=DF_start=DF_S=dfStart = 1 ( i.e. notional at the moment zero is =notional)
 	
 	
 
@@ -43,8 +43,8 @@ int main()
 		jacobian_at_x = -df0/(obj1.get_accrualFactor()*obj2.get_curves()*obj2.get_curves());//std::pow((y / x), -1);
 		x_new = x - spreadValue_at_x / jacobian_at_x;
 	} while (abs(x_new - x) >= error);
-
-	std::cout << get_zero_rate(x_new, endTime) << std::endl;
+	//std::cout <<  x_new << "-DFend" << std::endl;
+	std::cout << get_zero_rate(x_new, endTime) << "- zero rate; " << x_new << "-DFend";
 
 	return 0;
 	
