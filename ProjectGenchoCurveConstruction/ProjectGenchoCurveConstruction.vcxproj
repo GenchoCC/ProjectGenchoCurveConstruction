@@ -116,15 +116,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AnnuityCouponFixedDefinition.h" />
     <ClInclude Include="cash.h" />
     <ClInclude Include="currency.h" />
     <ClInclude Include="spreadCalculator.h" />
+    <ClInclude Include="SwapFixedIborDefinition.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AnnuityCouponFixedDefinition.cpp" />
     <ClCompile Include="cash.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="currency.cpp" />
     <ClCompile Include="spreadCalculator.cpp" />
+    <ClCompile Include="SwapFixedIborDefinition.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

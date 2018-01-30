@@ -11,10 +11,10 @@ int main()
 {
 	std::string currencyName = "EUR";
 	double startTime = 0;
-	double endTime = 0.5; //half a year?
-	double notional = 100000000;
-	double rate = 0.0250;
-	double accrualFactor = 0.508; // 1/360
+	double endTime = 0.0027397260273972603; //half a year?
+	double notional = 1.0;
+	double rate = 0.01;
+	double accrualFactor = 0.002777777777777778; // 1/360
 	Cash  obj1(Currency(currencyName), startTime, endTime, notional, rate, accrualFactor);
 	
 	//auto cash1 = std::make_shared<Cash>(Currency("USD"), 2, 3, 1, 0.01, 0.1);
@@ -24,7 +24,7 @@ int main()
 	double x, jacobian_at_x, spreadValue_at_x;
 	double error = pow( 10 , -12 );
 	double x_new = 0.1; // initial guess of a dfEnd
-	double df0 = 0.999; // i.e. DF_0=DF_start=DF_S=dfStart = 1 ( i.e. notional at the moment zero is =notional)
+	double df0 = 1; // i.e. DF_0=DF_start=DF_S=dfStart = 1 ( i.e. notional at the moment zero is =notional)
 	
 	
 
