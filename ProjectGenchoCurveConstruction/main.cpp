@@ -4,6 +4,9 @@
 #include "Cash.h"
 #include "Currency.h"
 #include "SpreadCalculator.h"
+#include "GeneratorSwapFixedIbor.h"
+#include "SwapFixedIborDefinition.h"
+
 #include <cmath> // do we need this for log?
 
 double get_zero_rate(double val, double tau) { return -log(val) / tau; }
@@ -20,6 +23,7 @@ int main()
 	//auto cash1 = std::make_shared<Cash>(Currency("USD"), 2, 3, 1, 0.01, 0.1);
 	//auto cash2 = std::make_shared<Cash>(Currency("USD"), 2.1, 3.1, 1.1, 0.011, 0.111);
 	//double y = cash1->get_rate(); /// because pointer
+	// class Brent : public Solver1D<Brent> {
 
 	double x, jacobian_at_x, spreadValue_at_x;
 	double error = pow( 10 , -12 );
@@ -45,7 +49,18 @@ int main()
 	} while (abs(x_new - x) >= error);
 	//std::cout <<  x_new << "-DFend" << std::endl;
 	std::cout << get_zero_rate(x_new, endTime) << "- zero rate; " << x_new << "-DFend";
-
+	double mktQuote = 0.01;
+	//GeneratorSwapFixedIbor mySwapGenerator;
+	double startDate = 0;
+	double endDate = 10;
+	GeneratorSwapFixedIbor generator;
+	//double notional = 1;
+	//double rate = 1;
+	/*
+	int zero = 0;
+	SwapFixedIborDefinition mySwap( startDate, endDate, generator, notional, rate, zero);
+	double print = mySwap.get_smth();
+	*/
 	return 0;
 	
 

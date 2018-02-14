@@ -116,22 +116,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AnnuityCouponDefinition.h" />
     <ClInclude Include="AnnuityCouponFixedDefinition.h" />
+    <ClInclude Include="AnnuityCouponFloatingDefinition.h" />
     <ClInclude Include="cash.h" />
+    <ClInclude Include="CouponIborDefinition.h" />
     <ClInclude Include="currency.h" />
+    <ClInclude Include="GeneratorSwapFixedIbor.h" />
     <ClInclude Include="spreadCalculator.h" />
     <ClInclude Include="SwapFixedIborDefinition.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AnnuityCouponDefinition.cpp" />
     <ClCompile Include="AnnuityCouponFixedDefinition.cpp" />
+    <ClCompile Include="AnnuityCouponFloatingDefinition.cpp" />
     <ClCompile Include="cash.cpp" />
+    <ClCompile Include="CouponIborDefinition.cpp" />
+    <ClCompile Include="GeneratorSwapFixedIbor.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="currency.cpp" />
     <ClCompile Include="spreadCalculator.cpp" />
     <ClCompile Include="SwapFixedIborDefinition.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
