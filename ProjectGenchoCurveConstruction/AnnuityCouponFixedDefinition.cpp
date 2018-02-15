@@ -1,19 +1,18 @@
 #include "AnnuityCouponFixedDefinition.h"
-#include "AnnuityCouponDefinition.h"
+#include <iostream>
 
-// virtual function of the AnnuityCouponDefinition defined here
-int AnnuityCouponDefinition::get_n_of_coupons(double typeOfCoupon, double settlementDate, double maturityDate, double paymentPeriod) {
-	return 1;
-}
-	
-	
-/*
+
 AnnuityCouponFixedDefinition::AnnuityCouponFixedDefinition()
 {
+	std::cout << "Object AnnuityCouponFixedDefinition is being created";
 }
 
+AnnuityCouponFixedDefinition::AnnuityCouponFixedDefinition(double mktQuote, GeneratorSwapFixedIbor generator, double etc)
+	//: mktQuote{ mktQuote }, generator{ generator }, etc{ etc }
+{
+	std::cout << "Object AnnuityCouponFixedDefinition is being created";
+}
 
 AnnuityCouponFixedDefinition::~AnnuityCouponFixedDefinition()
 {
 }
-*/

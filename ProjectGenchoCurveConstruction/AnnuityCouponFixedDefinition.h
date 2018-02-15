@@ -1,13 +1,18 @@
 #pragma once
-#include "AnnuityCouponDefinition.h"
+//#include "AnnuityCouponDefinition.h"
+#include "GeneratorSwapFixedIbor.h"
 
 
-class AnnuityCouponFixedDefinition : public AnnuityCouponDefinition 
+class AnnuityCouponFixedDefinition
 {
-	int n_of_coupons = 1; // some object p 66
-
+	double mktQuote;
+	GeneratorSwapFixedIbor generator;
+	double etc;
 public:
 	AnnuityCouponFixedDefinition();
+	AnnuityCouponFixedDefinition(double mktQuote, GeneratorSwapFixedIbor generator, double etc);
 	~AnnuityCouponFixedDefinition();
 };
-
+/*
+class AnnuityCouponFixedDefinition : public AnnuityCouponDefinition 
+*/

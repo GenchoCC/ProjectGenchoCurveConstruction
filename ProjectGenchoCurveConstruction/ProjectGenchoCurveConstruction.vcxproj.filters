@@ -26,10 +26,7 @@
     <ClInclude Include="GeneratorSwapFixedIbor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CouponIborDefinition.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AnnuityCouponFloatingDefinition.txt">
+    <ClInclude Include="AnnuityCouponFixedDefinition.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -46,22 +43,13 @@
     <ClCompile Include="spreadCalculator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AnnuityCouponDefinition.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="AnnuityCouponFixedDefinition.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="AnnuityCouponFloatingDefinition.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SwapFixedIborDefinition.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GeneratorSwapFixedIbor.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CouponIborDefinition.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,14 +1,11 @@
 #include "SwapFixedIborDefinition.h"
 #include "GeneratorSwapFixedIbor.h"
 #include <iostream>
+//#include "AnnuityCouponFixedDefinition.h"
 
 
+SwapFixedIborDefinition::SwapFixedIborDefinition() {}
 
-SwapFixedIborDefinition::SwapFixedIborDefinition()//const AnnuityCouponFixedDefinition& fixedLeg, const AnnuityCouponIborDefinition& iborLeg)
-	//: fixedLeg{ fixedLeg }, iborLeg{ iborLeg }
-{
-	std::cout << "WTF Object of class 'SwapFixedIborDefinition' is being created";
-}
 
 SwapFixedIborDefinition::SwapFixedIborDefinition(double mktQuote, GeneratorSwapFixedIbor generator, double etc)
 	: mktQuote{ mktQuote }, generator{ generator }, etc{ etc }
@@ -21,7 +18,12 @@ SwapFixedIborDefinition SwapFixedIborDefinition::getDefinition(double startDate,
 {
 	return SwapFixedIborDefinition(mktQuote, generator, etc);
 }
-
+/*
+AnnuityCouponFixedDefinition SwapFixedIborDefinition::getFixedLeg(double mktQuote, GeneratorSwapFixedIbor generator, double etc)
+{
+	return AnnuityCouponFixedDefinition(mktQuote, generator, etc);
+}
+*/
 SwapFixedIborDefinition::~SwapFixedIborDefinition()
 {
 }

@@ -6,6 +6,7 @@
 #include "SpreadCalculator.h"
 #include "GeneratorSwapFixedIbor.h"
 #include "SwapFixedIborDefinition.h"
+//#include "AnnuityCouponFixedDefinition.h"
 
 #include <cmath> // do we need this for log?
 
@@ -54,12 +55,15 @@ int main()
 	double startDate = 0;
 	double endDate = 10;
 	GeneratorSwapFixedIbor generator;
-	double print_1 = generator.getSomePrimitive();
+	//double print_1 = generator.getSomePrimitive();
 
-	double etc = 0;
-	int zero = 1;
-	SwapFixedIborDefinition mySwapInitialized;
-	SwapFixedIborDefinition mySwap = mySwapInitialized.getDefinition( startDate, endDate, generator, notional, rate, zero);
+	//double etc = 0;
+	//int zero;
+	//SwapFixedIborDefinition mySwapInitialized;
+	//SwapFixedIborDefinition mySwap = mySwapInitialized.getDefinition( startDate, endDate, generator, notional, rate, zero);
+	//SwapFixedIborDefinition mySwap(mktQuote, generator, etc);
+	//AnnuityCouponFixedDefinition fixedLeg = 
+	//mySwap.getFixedLeg(mktQuote, generator, etc);
 	//double print = mySwap.get_smth();
 	
 	return 0;
