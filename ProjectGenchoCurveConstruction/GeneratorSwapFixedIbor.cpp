@@ -1,32 +1,19 @@
 #include "GeneratorSwapFixedIbor.h"
 #include <iostream>
 
-//std::string
-
-GeneratorSwapFixedIbor::GeneratorSwapFixedIbor()//double startDate, double endDate)
+GeneratorSwapFixedIbor::GeneratorSwapFixedIbor()
 	: somePrimitive{ somePrimitive }
 {
-	somePrimitive = 1;
-	std::cout << "Object GeneratorSwapFixedIbor is being created";
+	somePrimitive = 101;
+	std::cout << "Object GeneratorSwapFixedIbor is being created" << somePrimitive;
 }
-
 
 GeneratorSwapFixedIbor::~GeneratorSwapFixedIbor()
 {
 }
 
-SwapFixedIborDefinition GeneratorSwapFixedIbor::generateThisInstrument(double startDate, double endDate, double notional, double rate, int zero)
+double GeneratorSwapFixedIbor::getSomePrimitive()
 {
-	return SwapFixedIborDefinition(startDate, endDate, notional, rate, zero);
+	return somePrimitive;
 }
-/*
-SwapFixedIborDefinition GeneratorSwapFixedIbor::generateThisInstrument(double startDate, double endDate, double notional, double rate, int zero)
-{
-	return SwapFixedIborDefinition(startDate, endDate, notional, rate, zero);
-}
-*/
-/*
-void GeneratorSwapFixedIbor::generateThisInstrument(GeneratorSwapFixedIbor generator, double startDate, double endDate, double notional, double rate)
-{
-}
-*/
+

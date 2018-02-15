@@ -20,15 +20,6 @@
     <ClInclude Include="spreadCalculator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="AnnuityCouponDefinition.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AnnuityCouponFixedDefinition.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AnnuityCouponFloatingDefinition.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SwapFixedIborDefinition.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -36,6 +27,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CouponIborDefinition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AnnuityCouponFloatingDefinition.txt">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

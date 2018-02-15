@@ -54,13 +54,14 @@ int main()
 	double startDate = 0;
 	double endDate = 10;
 	GeneratorSwapFixedIbor generator;
-	//double notional = 1;
-	//double rate = 1;
-	/*
-	int zero = 0;
-	SwapFixedIborDefinition mySwap( startDate, endDate, generator, notional, rate, zero);
-	double print = mySwap.get_smth();
-	*/
+	double print_1 = generator.getSomePrimitive();
+
+	double etc = 0;
+	int zero = 1;
+	SwapFixedIborDefinition mySwapInitialized;
+	SwapFixedIborDefinition mySwap = mySwapInitialized.getDefinition( startDate, endDate, generator, notional, rate, zero);
+	//double print = mySwap.get_smth();
+	
 	return 0;
 	
 

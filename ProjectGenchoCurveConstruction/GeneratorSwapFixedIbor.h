@@ -1,5 +1,4 @@
 #pragma once
-#include "SwapFixedIborDefinition.h"
 class GeneratorSwapFixedIbor
 {
 	double somePrimitive;
@@ -11,8 +10,8 @@ class GeneratorSwapFixedIbor
 public:
 	GeneratorSwapFixedIbor();
 	~GeneratorSwapFixedIbor();
-	generateThisInstrument(double startDate, double endDate, double notional, double rate, int zero);
-	// SwapFixedIborDefinition generateThisInstrument(double startDate, double endDate, double notional, double rate, int zero);
+	double getSomePrimitive();
+
 };
 /*
  * this is what inside the OG GeneratorSwapFixedIbor generator

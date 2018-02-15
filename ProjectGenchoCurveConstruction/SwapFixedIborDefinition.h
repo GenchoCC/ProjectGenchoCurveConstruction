@@ -12,10 +12,13 @@ private:
 	double notional;
 	double rate;
 	int zero;
+	double mktQuote;
+	double etc;
+
 public:
 	SwapFixedIborDefinition();
-	SwapFixedIborDefinition(double startDate, double endDate, double notional, double rate, int zero);
-	SwapFixedIborDefinition(double startDate, double endDate, GeneratorSwapFixedIbor generator, double notional, double rate, int zero);
+	SwapFixedIborDefinition(double mktQuote, GeneratorSwapFixedIbor generator, double etc); //needed for a getDef call
+	SwapFixedIborDefinition getDefinition(double startDate, double endDate, GeneratorSwapFixedIbor generator, double notional, double rate, int zero);
 	~SwapFixedIborDefinition();
 	double get_smth();
 };

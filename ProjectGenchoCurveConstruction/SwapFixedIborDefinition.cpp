@@ -7,26 +7,21 @@
 SwapFixedIborDefinition::SwapFixedIborDefinition()//const AnnuityCouponFixedDefinition& fixedLeg, const AnnuityCouponIborDefinition& iborLeg)
 	//: fixedLeg{ fixedLeg }, iborLeg{ iborLeg }
 {
-	std::cout << "Object of class 'SwapFixedIborDefinition' is being created";
+	std::cout << "WTF Object of class 'SwapFixedIborDefinition' is being created";
 }
-SwapFixedIborDefinition::SwapFixedIborDefinition(double startDate, double endDate, double notional, double rate, int zero)
-	: startDate{ startDate }, endDate{ endDate }, notional{ notional }, rate{ rate }, zero{ zero }
+
+SwapFixedIborDefinition::SwapFixedIborDefinition(double mktQuote, GeneratorSwapFixedIbor generator, double etc)
+	: mktQuote{ mktQuote }, generator{ generator }, etc{ etc }
 {
 	std::cout << "Object SwapFixedIbor is being created";
+
 }
-SwapFixedIborDefinition::SwapFixedIborDefinition(double startDate, double endDate, GeneratorSwapFixedIbor generator, double notional, double rate, int zero)
+
+SwapFixedIborDefinition SwapFixedIborDefinition::getDefinition(double startDate, double endDate, GeneratorSwapFixedIbor generator, double notional, double rate, int zero)
 {
-	SwapFixedIborDefinition myObject= generator.generateThisInstrument(startDate, endDate, notional, rate, zero);
-	std::cout << "generator.generateThisInstrument is being called from SwapFixedIborDefinition";
+	return SwapFixedIborDefinition(mktQuote, generator, etc);
 }
-/*
-SwapFixedIborDefinition::SwapFixedIborDefinition(double startDate, double endDate, GeneratorSwapFixedIbor generator, double notional, double rate, int zero)
-	: startDate{ startDate }, endDate{ endDate }, generator{ generator }, notional{ notional }, rate{ rate }, zero{ zero }
-{
-	gen = generator.generateThisInstrument(startDate, endDate, notional, rate, zero);
-	std::cout << "generator.generateThisInstrument is being called from SwapFixedIborDefinition";
-}
-*/
+
 SwapFixedIborDefinition::~SwapFixedIborDefinition()
 {
 }
@@ -34,5 +29,4 @@ SwapFixedIborDefinition::~SwapFixedIborDefinition()
 double SwapFixedIborDefinition::get_smth() {
 	std::cout << " we can call smth ";
 	return 100;
-
 }
