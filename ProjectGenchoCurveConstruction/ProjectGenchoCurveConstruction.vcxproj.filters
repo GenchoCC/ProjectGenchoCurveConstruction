@@ -14,30 +14,24 @@
     <ClInclude Include="cash.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="currency.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="spreadCalculator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SwapFixedIborDefinition.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GeneratorSwapFixedIbor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="AnnuityCouponFixedDefinition.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="currency.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratorSwapFixedIbor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SwapFixedIborDefinition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="cash.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="currency.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="spreadCalculator.cpp">
@@ -46,11 +40,20 @@
     <ClCompile Include="AnnuityCouponFixedDefinition.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SwapFixedIborDefinition.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="GeneratorSwapFixedIbor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SwapFixedIborDefinition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="currency.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="main.txt" />
   </ItemGroup>
 </Project>

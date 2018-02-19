@@ -1,29 +1,19 @@
-#pragma once
 // we replicate same named class with the 2nd constructor from OG.
+#pragma once
 #include "GeneratorSwapFixedIbor.h"
-//#include "AnnuityCouponFixedDefinition.h"
+#include "AnnuityCouponFixedDefinition.h"
 
 class SwapFixedIborDefinition
 {
-private:
+//private:
 	GeneratorSwapFixedIbor generator;
-	double startDate;
-	double endDate;
-	double accrualFactor;
-	double notional;
-	double rate;
-	int zero;
 	double mktQuote;
 	double etc;
-	//AnnuityCouponFixedDefinition fixed_leg;
-	//AnnuityCouponFloatingDefinition floating_leg;
 
 public:
 	SwapFixedIborDefinition();
-	SwapFixedIborDefinition(double mktQuote, GeneratorSwapFixedIbor generator, double etc); //needed for a getDef call
-	SwapFixedIborDefinition getDefinition(double startDate, double endDate, GeneratorSwapFixedIbor generator, double notional, double rate, int zero);
-	//AnnuityCouponFixedDefinition getFixedLeg(double mktQuote, GeneratorSwapFixedIbor generator, double etc);
-	//AnnuityCouponFloatingDefinition getFloatingLeg(double mktQuote, GeneratorSwapFixedIbor generator, double etc);
+	SwapFixedIborDefinition(double mktQuote, GeneratorSwapFixedIbor generator, double etc);
+	AnnuityCouponFixedDefinition getFixedLeg(double mktQuote, GeneratorSwapFixedIbor generator, double etc);
 	~SwapFixedIborDefinition();
 	double get_smth();
 };

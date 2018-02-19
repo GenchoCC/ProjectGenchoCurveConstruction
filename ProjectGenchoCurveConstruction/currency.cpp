@@ -6,3 +6,8 @@ Currency::Currency(std::string currencyName)
 	currencyName;
 
 }
+
+Currency::Currency()
+{
+	currencyName = "UAH";
+}

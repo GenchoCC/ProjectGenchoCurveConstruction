@@ -9,6 +9,7 @@ class GeneratorSwapFixedIbor
 	int zero;
 public:
 	GeneratorSwapFixedIbor();
+	GeneratorSwapFixedIbor(double somePrimitive, double startDate, double endDate, double notional, double rate, int zero);
 	~GeneratorSwapFixedIbor();
 	double getSomePrimitive();
 

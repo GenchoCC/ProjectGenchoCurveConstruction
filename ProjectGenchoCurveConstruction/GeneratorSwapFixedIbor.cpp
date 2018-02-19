@@ -5,7 +5,11 @@ GeneratorSwapFixedIbor::GeneratorSwapFixedIbor()
 	//: somePrimitive{ somePrimitive }
 {
 	somePrimitive = 101;
-	std::cout << "Object GeneratorSwapFixedIbor is being created" << somePrimitive;
+	std::cout << "\n Object GeneratorSwapFixedIbor(empty) is being created" << "\n" <<somePrimitive;
+}
+
+GeneratorSwapFixedIbor::GeneratorSwapFixedIbor(double somePrimitive, double startDate, double endDate, double notional, double rate, int zero)
+{
 }
 
 GeneratorSwapFixedIbor::~GeneratorSwapFixedIbor()

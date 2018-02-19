@@ -8,4 +8,5 @@ class Currency
 
 	public:
 		Currency(std::string currencyName);
+		Currency();// haha
 };
